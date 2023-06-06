@@ -459,8 +459,12 @@
 							<div class="timeline-content">
 								<div class="timeline-content-txt">
 									<p>
-										Consensus in Data Management: From Distributed Commit to
-										Blockchain,
+										<a
+											href="https://www.nowpublishers.com/article/Details/DBS-075"
+										>
+											Consensus in Data Management: From Distributed Commit to
+											Blockchain</a
+										>,
 										<a href="https://arxiv.org/abs/2302.02325">
 											Collaborative Consensus</a
 										>,
@@ -473,7 +477,7 @@
 						</div>
 					</div>
 					<div class="timeline-box">
-						<div class="timeline-box-wrap future">
+						<div class="timeline-box-wrap">
 							<h6>Winter 2023</h6>
 							<div class="timeline-content">
 								<div class="timeline-content-txt">
@@ -486,7 +490,12 @@
 										<a
 											href="https://github.com/resilientdb/resilientdb/releases/tag/nexres-v1.3.0"
 										>
-											Extended Python SDK
+											Extended Python SDK</a
+										>,
+										<a
+											href="https://github.com/resilientdb/resilientdb/releases/tag/nexres-v.1.4.0"
+										>
+											Native UTXO & Wallet API
 										</a>
 									</p>
 								</div>
