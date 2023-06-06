@@ -105,23 +105,7 @@
 			const { refreshBlocks } = blocksStore;
 			refreshBlocks(); // Populate table on initial load
 
-			const socket = new WebSocket('ws://localhost:18000/blockupdatelistener'); 
-			socket.addEventListener('open', function (event) { 
-				console.log('Opened websocket for reading blocks'); 
-			}); 
-
-			socket.addEventListener('message', function (event) { 
-				console.log(event.data);
-
-				function delay(time) {
-					return new Promise(resolve => setTimeout(resolve, time));
-				}
-				delay(1000).then(() => refreshBlocks());
-			});
-
-			socket.addEventListener('close', function (event) { 
-				console.log('Websocket for reading blocks has been closed'); 
-			});
+			setInterval(()=> { refreshBlocks() }, 5000);
 
 			return {
 				data: blocks,
