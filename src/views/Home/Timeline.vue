@@ -520,18 +520,26 @@
 							<h6>Spring 2023</h6>
 							<div class="timeline-content">
 								<div class="timeline-content-txt">
-									<p> 
+									<p>
+										<a
+											href="https://blog.resilientdb.com/2023/07/12/NexResWallet.html"
+										>
+											Wallet Integration</a
+										>,
 										<span>
-											<a href="https://blog.resilientdb.com/2023/07/12/NexResWallet.html">Wallet Integration,</a>
+											<a
+												href="https://blog.resilientdb.com/2023/05/06/NexResExplorer.html"
+											>
+												Exploration & Deployment Dashboard</a
+											>
 										</span>
-										Exploration & Deployment Dashboard
 									</p>
 								</div>
 							</div>
 						</div>
 					</div>
 					<div class="timeline-box">
-						<div class="timeline-box-wrap future">
+						<div class="timeline-box-wrap">
 							<h6>Summer 2023</h6>
 							<div class="timeline-content">
 								<div class="timeline-content-txt">

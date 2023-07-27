@@ -42,6 +42,11 @@
 			},
 		},
 		{
+			title: "Hash",
+			dataIndex: "hash",
+			key: "hash",
+		},
+		{
 			title: "Size",
 			dataIndex: "size",
 			key: "size",
@@ -51,9 +56,31 @@
 			},
 		},
 		{
+			title: "Block Height",
+			dataIndex: "blockHeight",
+			key: "blockHeight",
+		},
+		{
 			title: "Transactions",
 			dataIndex: "transactions",
 			key: "transactions",
+		},
+		{
+			title: "Mined By",
+			dataIndex: "minedBy",
+			key: "minedBy",
+		},
+
+		{
+			title: "Gas Used",
+			dataIndex: "gasUsed",
+			key: "gasUsed",
+		},
+
+		{
+			title: "Commit Certificate",
+			key: "commitCertificate",
+			dataIndex: "commitCertificate",
 		},
 		{
 			title: "Created At",
@@ -99,30 +126,7 @@
 			};
 
 			const searchInput = ref();
-			const blocksStore = useBlocksStore();
-			const { blocks } = storeToRefs(blocksStore);
-
-			const { refreshBlocks } = blocksStore;
-			refreshBlocks(); // Populate table on initial load
-
-			const socket = new WebSocket('ws://localhost:18000/blockupdatelistener'); 
-			socket.addEventListener('open', function (event) { 
-				console.log('Opened websocket for reading blocks'); 
-			}); 
-
-			socket.addEventListener('message', function (event) { 
-				console.log(event.data);
-
-				function delay(time) {
-					return new Promise(resolve => setTimeout(resolve, time));
-				}
-				delay(1000).then(() => refreshBlocks());
-			});
-
-			socket.addEventListener('close', function (event) { 
-				console.log('Websocket for reading blocks has been closed'); 
-			});
-
+			const { blocks } = storeToRefs(useBlocksStore());
 			return {
 				data: blocks,
 				columns,

@@ -44,13 +44,9 @@
 			DownOutlined,
 			FireTwoTone,
 		},
-		async setup() {
+		setup() {
 			const route = useRoute();
-			const blocksStore = useBlocksStore();
-			const { blocks } = storeToRefs(blocksStore);
-			const { refreshBlocks } = blocksStore;
-			await refreshBlocks();
-
+			const { blocks } = storeToRefs(useBlocksStore());
 			const block = blocks.value.filter(
 				(b) => b.id === parseInt(route.query.id as string)
 			);
@@ -73,8 +69,14 @@
 				<a-descriptions-item label="Block #">
 					{{ data[0].number }}</a-descriptions-item
 				>
+				<a-descriptions-item label="Hash">{{
+					data[0].hash
+				}}</a-descriptions-item>
 				<a-descriptions-item label="Size">{{
-					data[0].size + " bytes"
+					data[0].size
+				}}</a-descriptions-item>
+				<a-descriptions-item label="Block Height">{{
+					data[0].blockHeight
 				}}</a-descriptions-item>
 				<a-descriptions-item label="Transactions">
 					<a-tag color="cyan">
@@ -82,6 +84,31 @@
 								{{ Object.keys(data[0].transactions).length }} transactions
 							</a>
 						</a-tag>
+				</a-descriptions-item>
+				<a-descriptions-item label="Mined By">{{
+					data[0].minedBy
+				}}</a-descriptions-item>
+				<a-descriptions-item label="Difficulty">
+					{{ data[0].difficulty }}
+				</a-descriptions-item>
+				<a-descriptions-item label="Total Difficulty">
+					{{ data[0].totalDifficulty }}
+				</a-descriptions-item>
+				<a-descriptions-item label="Gas Used">
+					{{ data[0].gasUsed }}
+					<fire-two-tone two-tone-color="red" />
+				</a-descriptions-item>
+				<a-descriptions-item label="Parent Hash">
+					{{ data[0].parentHash }}
+				</a-descriptions-item>
+				<a-descriptions-item label="State Root">
+					{{ data[0].stateRoot }}
+				</a-descriptions-item>
+				<a-descriptions-item label="Nounce">
+					{{ data[0].nounce }}
+				</a-descriptions-item>
+				<a-descriptions-item label="Commit Certificate">
+					{{ data[0].commitCertificate }}
 				</a-descriptions-item>
 				<a-descriptions-item label="Created At">
 					{{ data[0].createdAt }}
