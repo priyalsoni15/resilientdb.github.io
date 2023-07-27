@@ -516,11 +516,16 @@
 					</div>
 
 					<div class="timeline-box">
-						<div class="timeline-box-wrap future">
+						<div class="timeline-box-wrap">
 							<h6>Spring 2023</h6>
 							<div class="timeline-content">
 								<div class="timeline-content-txt">
-									<p>Wallet Integration, Exploration & Deployment Dashboard</p>
+									<p> 
+										<span>
+											<a href="https://blog.resilientdb.com/2023/07/12/NexResWallet.html">Wallet Integration,</a>
+										</span>
+										Exploration & Deployment Dashboard
+									</p>
 								</div>
 							</div>
 						</div>
