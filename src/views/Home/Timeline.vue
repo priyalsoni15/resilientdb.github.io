@@ -4,7 +4,7 @@
 		min-width="100px"
 		timeline-background="#00010300"
 		title-class="_title"
-		line-color="#59B4A9" 
+		line-color="#59B4A9"
 	/> -->
 	<section class="about-timeline">
 		<div class="wrapper inner-wrapper-padding">
