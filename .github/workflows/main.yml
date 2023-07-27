@@ -3,7 +3,7 @@ name: Build and Deploy Vue.js App
 on:
   push:
     branches:
-      - connect-sdk  # Adjust this branch name as needed
+      - connect-sdk
 
 jobs:
   build-and-deploy:
@@ -16,7 +16,7 @@ jobs:
       - name: Install Node.js
         uses: actions/setup-node@v2
         with:
-          node-version: '14'  # Use the Node.js version required for your Vue.js app
+          node-version: '14'
 
       - name: Install dependencies
         run: npm install
