@@ -29,3 +29,5 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./dist  # Adjust this path if your build output is in a different directory
+          external_repository: resilientdb/resilientdb.github.io # Replace with your GitHub username and repository name where the custom domain is configured
+          custom_domain: resilientdb.com # Replace with your custom domain
