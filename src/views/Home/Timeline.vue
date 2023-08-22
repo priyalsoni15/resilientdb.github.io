@@ -544,16 +544,26 @@
 							<div class="timeline-content">
 								<div class="timeline-content-txt">
 									<p>
-										Application Landscape:
+										Arbitrary Failures Recovery: 
+										<span>
+											<a href="https://github.com/resilientdb/resilientdb/releases/tag/nexres-v1.7.0">
+											Local Recovery from Durable Log
+											</a>
+										</span> & 
+										<span>
+											<a href="https://github.com/resilientdb/resilientdb/releases/tag/nexres-v1.8.0">
+											Remote Recovery through Leader Replacement
+											</a>
+										</span>, Application Landscape:
 										<span>
 											<a href="https://nft.resilientdb.com/"> NFT</a>
 										</span>
 										&
 										<span>
 											<a href="https://debitable.resilientdb.com/">
-												Debitable,
+												Debitable
 											</a>
-										</span>
+										</span>,
 										Minting Resilient Token (RoK)
 									</p>
 								</div>
