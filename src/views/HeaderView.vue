@@ -1,7 +1,11 @@
 <template>
 	<div class="header">
 		<div class="logo" style="display: flex; align-items: center">
-			<img src="@/assets/resilientdb_logo_light-text-modern.svg" class="logo" alt="ResilientDB" />
+			<img src="@/assets/resdb_logo_80.png" class="logo" alt="ResilientDB" />
+			<div class="title">
+				ResilientDB
+				<div class="version">NexRes</div>
+			</div>
 		</div>
 		<div class="tabs" style="display: flex">
 			<horizontal-menu-bar />
@@ -35,7 +39,6 @@
 
 		.header .logo {
 			justify-content: center;
-			width: 80px;
 		}
 
 		.header .tabs {
