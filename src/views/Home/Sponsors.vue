@@ -31,8 +31,16 @@
 
 			<li class="sponsor">
 				<img
-					src="https://img1.wsimg.com/isteam/ip/3bc6d213-a1c1-40c3-b5fd-8efb825a593b/400dpiLogo.jpg/:/rs=w:662,h:400,cg:true,m/cr=w:662,h:400/qt=q:95"
+					src="https://i.imgur.com/w4KqRQL.png"
 					alt="moka-blox"
+					style="width: 200px"
+				/>
+			</li>
+
+			<li class="sponsor">
+				<img
+					src="https://i.imgur.com/CRyQWRK.png"
+					alt="MystenLab"
 					style="width: 200px"
 				/>
 			</li>

@@ -60,36 +60,6 @@
 		</div>
 	</section>
 
-	<section class="stance">
-		<div class="info">
-			<div class="title">OUR STANCE</div>
-			<div class="desc">
-				We stand in solidarity with the brave and determined Iranian women and
-				Iranian people. We are committed to upholding fundamental human rights,
-				maintaining equity and justice, and standing against the use of
-				violence, repression, and discrimination. We condemn the barbaric acts
-				and brutal killings in Iranian streets,
-				<a
-					href="https://www.ucdavis.edu/news/chancellors-statement-crisis-ukraine"
-					target="_blank"
-					>of innocent people in Ukraine</a
-				>, and everywhere globally.
-			</div>
-			<strong>#MahsaAmini &nbsp #مهسا_امینی &nbsp #WomenLifeFreedom</strong>
-			<div>
-				[Statements by UC Davis:
-				<a
-					href="https://www.ucdavis.edu/news/statement-resources-and-support-impacted-unrest-iran"
-					>Chancellor Gary S. May</a
-				>,
-				<a
-					href="https://engineering.ucdavis.edu/news/statement-resources-and-support-those-impacted-unrest-iran"
-					>Dean Corsi, College of Engineering</a
-				>]
-			</div>
-		</div>
-	</section>
-
 	<section class="mission">
 		<div class="info">
 			<div class="title">OUR MISSION</div>
