@@ -1,11 +1,7 @@
 <template>
 	<div class="header">
 		<div class="logo" style="display: flex; align-items: center">
-			<img src="@/assets/resilientdb_logo_light-text-modern-v5.svg" class="logo" alt="ResilientDB" width="80px" />
-			<div class="title">
-				ResilientDB
-				<div class="version">NexRes</div>
-			</div>
+			<img src="@/assets/resilientdb_logo_light-text-modern-v5.svg" class="logo" alt="ResilientDB" />
 		</div>
 		<div class="tabs" style="display: flex">
 			<horizontal-menu-bar />
