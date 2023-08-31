@@ -1,7 +1,7 @@
 <template>
 	<div class="header">
 		<div class="logo" style="display: flex; align-items: center">
-			<img src="@/assets/resdb_logo_80.png" class="logo" alt="ResilientDB" />
+			<img src="@/assets/resilientdb_logo_light-text-modern-v5.svg" class="logo" alt="ResilientDB" width="80px" />
 			<div class="title">
 				ResilientDB
 				<div class="version">NexRes</div>
