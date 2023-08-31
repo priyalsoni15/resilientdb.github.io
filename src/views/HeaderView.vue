@@ -28,6 +28,11 @@
 		// background: $secondary-color-dark;
 		background: #000103;
 	}
+
+	.header .logo {
+		width: 180px;
+	}
+
 	@media (max-width: 725px) {
 		.header {
 			display: inline;
@@ -35,6 +40,7 @@
 
 		.header .logo {
 			justify-content: center;
+			width: 180px;
 		}
 
 		.header .tabs {
