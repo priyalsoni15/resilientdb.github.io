@@ -40,7 +40,10 @@
 
 		.header .logo {
 			justify-content: center;
-			width: 180px;
+			margin-left: auto;
+			display: block;
+			margin-right: auto;
+			width: 70%;
 		}
 
 		.header .tabs {
