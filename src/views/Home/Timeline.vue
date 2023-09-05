@@ -544,7 +544,11 @@
 							<div class="timeline-content">
 								<div class="timeline-content-txt">
 									<p>
-										Arbitrary Failures Recovery: 
+										<span>
+											<a href="https://blog.resilientdb.com/2023/08/22/ViewChangeInNexRes.html">
+											Arbitrary Failures Recovery
+											</a>
+										</span>: 
 										<span>
 											<a href="https://github.com/resilientdb/resilientdb/releases/tag/nexres-v1.7.0">
 											Local Recovery from Durable Log
@@ -580,16 +584,6 @@
 				<div class="timeline-row">
 					<div class="timeline-box">
 						<div class="timeline-box-wrap future">
-							<h6>Fall 2023</h6>
-							<div class="timeline-content">
-								<div class="timeline-content-txt">
-									<p>DAG Meets BFT</p>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="timeline-box">
-						<div class="timeline-box-wrap future">
 							<h6>September 30, 2023</h6>
 							<div class="timeline-content">
 								<div class="timeline-content-txt">
@@ -600,10 +594,20 @@
 					</div>
 					<div class="timeline-box">
 						<div class="timeline-box-wrap future">
+							<h6>Fall 2023</h6>
+							<div class="timeline-content">
+								<div class="timeline-content-txt">
+									<p>DAG Meets BFT</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="timeline-box">
+						<div class="timeline-box-wrap future">
 							<h6>Winter 2024</h6>
 							<div class="timeline-content">
 								<div class="timeline-content-txt">
-									<p>Philosophical Pillars of Blockchain</p>
+									<p>Smart Contract Concurrency Control</p>
 								</div>
 							</div>
 						</div>
@@ -621,7 +625,7 @@
 							<h6>Spring 2024</h6>
 							<div class="timeline-content">
 								<div class="timeline-content-txt">
-									<p>Smart Contract Concurrency Control</p>
+									<p>BFT Fairness</p>
 								</div>
 							</div>
 						</div>
@@ -631,7 +635,7 @@
 							<h6>Summer 2024</h6>
 							<div class="timeline-content">
 								<div class="timeline-content-txt">
-									<p>FLeX: Fault-tolerant Learner-Executer Paradigm</p>
+									<p>CAP Revisited in BFT</p>
 								</div>
 							</div>
 						</div>
@@ -641,7 +645,7 @@
 							<h6>Fall 2024</h6>
 							<div class="timeline-content">
 								<div class="timeline-content-txt">
-									<p>Off-chain Decentralized Storage</p>
+									<p>Philosophical Pillars of Blockchain</p>
 								</div>
 							</div>
 						</div>
@@ -659,7 +663,7 @@
 							<h6>Winter 2025</h6>
 							<div class="timeline-content">
 								<div class="timeline-content-txt">
-									<p>Reconfigurable Ecosystem</p>
+									<p>Off-chain Decentralized Storage</p>
 								</div>
 							</div>
 						</div>
@@ -667,6 +671,26 @@
 					<div class="timeline-box">
 						<div class="timeline-box-wrap future">
 							<h6>Spring 2025</h6>
+							<div class="timeline-content">
+								<div class="timeline-content-txt">
+									<p>FLeX: Fault-tolerant Learner-Executer Paradigm</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="timeline-box">
+						<div class="timeline-box-wrap future">
+							<h6>Fall 2025</h6>
+							<div class="timeline-content">
+								<div class="timeline-content-txt">
+									<p>Reconfigurable Ecosystem</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="timeline-box">
+						<div class="timeline-box-wrap future">
+							<h6>Winter 2026</h6>
 							<div class="timeline-content">
 								<div class="timeline-content-txt">
 									<p>Planet Scale Reliability</p>
