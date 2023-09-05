@@ -546,9 +546,9 @@
 									<p>
 										<span>
 											<a href="https://blog.resilientdb.com/2023/08/22/ViewChangeInNexRes.html">
-											Arbitrary Failures Recovery
+											Arbitrary Failures Recovery: 
 											</a>
-										</span>: 
+										</span>
 										<span>
 											<a href="https://github.com/resilientdb/resilientdb/releases/tag/nexres-v1.7.0">
 											Local Recovery from Durable Log
