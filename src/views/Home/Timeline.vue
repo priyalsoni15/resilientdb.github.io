@@ -522,7 +522,7 @@
 								<div class="timeline-content-txt">
 									<p>
 										<a
-											href="https://blog.resilientdb.com/2023/07/12/NexResWallet.html"
+											href="https://blog.resilientdb.com/2023/09/21/ResVault.html"
 										>
 											Wallet Integration</a
 										>,
@@ -568,7 +568,11 @@
 												Debitable,
 											</a>
 										</span>
-										Minting Resilient Token (RoK)
+										<span>
+											<a href="https://blog.resilientdb.com/2023/09/21/ResVault.html">
+												Minting Resilient Token (RoK)
+											</a>
+										</span>
 									</p>
 								</div>
 							</div>
@@ -587,7 +591,13 @@
 							<h6>September 30, 2023</h6>
 							<div class="timeline-content">
 								<div class="timeline-content-txt">
-									<p>Apache Incubation</p>
+									<p>
+										<a
+											href="https://cwiki.apache.org/confluence/display/INCUBATOR/ResilientDBProposal"
+										>
+										Apache Incubation
+										</a>
+									</p>
 								</div>
 							</div>
 						</div>
