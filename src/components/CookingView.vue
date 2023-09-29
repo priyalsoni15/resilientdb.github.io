@@ -1,5 +1,5 @@
 <template>
-<iframe src="http://18.235.249.195:3000/d/-cdKDm9nk/nexres?orgId=1&refresh=auto&from=now-6h&to=now" border=0></iframe>
+<!--<iframe src="http://18.235.249.195:3000/d/-cdKDm9nk/nexres?orgId=1&refresh=auto&from=now-6h&to=now" border=0></iframe>-->
 </template>
 
 <script>
