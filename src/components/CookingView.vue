@@ -8,7 +8,8 @@
       font-size: 30pt;
     "
   >
-    Brewing <coffee-outlined style="margin-left: 10px; margin-top: -4px" />
+    <!--Brewing <coffee-outlined style="margin-left: 10px; margin-top: -4px" />-->
+<iframe src="http://18.235.249.195:3000/d/-cdKDm9nk/nexres?orgId=1&refresh=auto&from=now-6h&to=now"></iframe>
   </div>
 </template>
 
