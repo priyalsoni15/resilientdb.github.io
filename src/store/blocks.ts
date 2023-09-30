@@ -53,7 +53,7 @@ export const useBlocksStore = defineStore("blocks", {
 			if (!endpointsStore.endpoints[0]) {
 				throw new Error("No Endpoints Found.");
 			}
-
+      console.log("refresh block",endpointsStore.endpoints[0])
 			this.blocks = await getAvailableBlocks(endpointsStore.endpoints[0]);
 		},
 	},
