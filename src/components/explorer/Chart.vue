@@ -125,7 +125,7 @@
 					while (timeVal >= timeRange[timeIndex] + interval) {
 						timeIndex++;
 					}
-					transactionCount[timeIndex]++;
+					transactionCount[timeIndex] += blocks.value[i].transactions.length;
 				}
 
 				this.chartOptions = {
