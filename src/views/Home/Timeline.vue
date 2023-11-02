@@ -592,11 +592,10 @@
 							<div class="timeline-content">
 								<div class="timeline-content-txt">
 									<p>
-										<a
+										Apache Incubation [<a
 											href="https://cwiki.apache.org/confluence/display/INCUBATOR/ResilientDBProposal"
-										>
-										Apache Incubation
-										</a>
+										>Proposal</a>, <a href="https://incubator.apache.org/projects/resilientdb.html">Status</a>]
+										
 									</p>
 								</div>
 							</div>
