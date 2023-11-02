@@ -49,7 +49,7 @@
 			<!-- <div class="clearfix"></div> -->
 		</div>
 		<section class="copy">
-			<img src="@/assets/logo_slogan.png" style="width: 230px" />
+			<img src="@/assets/res_footer.png" style="width: 230px" />
 
 			<div class="copy_text">
 				<p>Copyright &copy; 2019-2022, ResilientDB</p>
