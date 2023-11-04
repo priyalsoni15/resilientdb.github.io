@@ -2,7 +2,7 @@
 <script lang="ts">
 	import { defineComponent } from "vue";
 	import Chart from "../explorer/Chart.vue";
-	import { useLedgerStore } from "@/store/blocks";
+	import { useBlocksStore, useLedgerStore } from "@/store/blocks";
 	import { storeToRefs } from "pinia";
 	
 
@@ -25,8 +25,15 @@
 			const { populateTable } = ledgerStore;
 			await populateTable();
 			console.log(ledger);
+
+			const blocksStore = useBlocksStore();
+			const { blocks } = storeToRefs(blocksStore);
+			const { refreshBlocks } = blocksStore;
+			await refreshBlocks();
+
 			return {
 				data: ledger,
+				blocks: blocks,
 			};
 		},
 	});
@@ -66,7 +73,7 @@
 				</a-col>
 			</a-row>
 			<!-- <a-col :md="12"> -->
-				<chart />
+				<Chart :blocks="blocks"/>
 				<!-- </a-col> -->
 		</a-card>
 	</div>

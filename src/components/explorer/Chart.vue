@@ -15,12 +15,66 @@
 	import { useBlocksStore } from "@/store/blocks";
 	import { storeToRefs } from "pinia";
 
+	// TODO: Create function to avoid duplicate code for creating chart data
 	export default {
 		name: "Chart",
 		components: {
 			apexcharts: VueApexCharts,
 		},
+		props: ['blocks'], // Passed from MetaData
 		data: function () {
+			const arrayRange = (start, stop, step) =>
+				Array.from(
+				{ length: (stop - start) / step + 1 },
+				(value, index) => start + index * step
+			);
+
+			const minuteInterval = 60*1000;
+			const hourInterval = 60*60*1000;
+			const dayInterval = 24*60*60*1000;
+			let interval = 0;
+
+			let timeStart = this.blocks.length > 0 ? 
+							Date.parse(this.blocks[0].createdAt) : 0;
+			let latestTime = this.blocks.length > 0 ? 
+							Date.parse(this.blocks[this.blocks.length - 1].createdAt) 
+							: 0;
+
+			if (latestTime - timeStart <= hourInterval) {
+				interval = minuteInterval;
+			}
+			else if (latestTime - timeStart <= dayInterval) {
+				interval = hourInterval;
+			}
+			else {
+				interval = dayInterval;
+			}
+			let timeRange = arrayRange(timeStart, latestTime, interval);
+
+			const getChartDateString = (time) => {
+				let str = new Date(time).toUTCString().substring(4);
+
+				// keep in UTC to be consistent with the BlocksTable
+				if (interval == dayInterval) {
+					str = str.substring(0, str.indexOf(":") - 3);
+				}
+				return str;
+			}
+
+			const timeAxis = timeRange.map(timeRange => getChartDateString(timeRange));
+
+			const transactionCount = Array(timeRange.length).fill(0);
+			let timeIndex = 0;
+			for (let i = 0; i < this.blocks.length; i++) {
+				let timeVal = Date.parse(this.blocks[i].createdAt);
+
+				// TODO: improve efficiency using binary search
+				while (timeVal >= timeRange[timeIndex] + interval) {
+					timeIndex++;
+				}
+				transactionCount[timeIndex] += this.blocks[i].transactions.length;
+			}
+
 			return {
 				chartOptions: {
 					chart: {
@@ -30,16 +84,10 @@
 						},
 					},
 					xaxis: {
-						categories: [
-							"May 9",
-							"May 10",
-							"May 11",
-							"May 12",
-							"May 13",
-							"May 14",
-							"May 15",
-							"May 16",
-						],
+						categories: timeAxis,
+					},
+					yaxis: {
+						min: 0,
 					},
 					grid: {
 						show: false,
@@ -62,8 +110,7 @@
 				series: [
 					{
 						name: "transactions",
-						data: [30, 40, 45, 50, 49, 60, 70, 91],
-						
+						data: transactionCount,
 					},
 				],
 			};
@@ -81,7 +128,6 @@
 					(value, index) => start + index * step
 				);
 
-				const timezone = "GMT";
 				const minuteInterval = 60*1000;
 				const hourInterval = 60*60*1000;
 				const dayInterval = 24*60*60*1000;
@@ -131,9 +177,6 @@
 				this.chartOptions = {
 					xaxis: {
 						categories: timeAxis,
-					},
-					yaxis: {
-						min: 0,
 					}
 				};
 
