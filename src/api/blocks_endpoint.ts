@@ -1,4 +1,3 @@
-import blocks from "@/api/blockstatus.json";
 import axios from "axios";
 
 export const getAvailableBlocks = async (address: string) => {
@@ -11,13 +10,11 @@ export const getAvailableBlocks = async (address: string) => {
 			headers: {
 				'Content-Type': 'application/json',
 			}
-		 })
+		})
 
-		 return res.data
+		return res.data
 	 }
 	 catch (err) {
-		 console.error(err);
+		console.error(err);
 	 }
-
-	// return blocks;
 };

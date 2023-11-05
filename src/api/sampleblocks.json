@@ -1,0 +1,108 @@
+[
+	{
+		"id": 1,
+		"number": "1",
+		"transactions": [
+			{
+				"cmd": "SET",
+				"key": "samplekey",
+				"value": "{\"id\":\"samplekey\",\"value\":\"samplevalue\"}"
+			}
+		],
+		"size": 76,
+		"createdAt": "05 Nov 2023 22:53:50 GMT"
+	},
+	{
+		"id": 2,
+		"number": "2",
+		"transactions": [
+			{
+				"cmd": "GET",
+				"key": "samplekey"
+			}
+		],
+		"size": 36,
+		"createdAt": "05 Nov 2023 22:54:09 GMT"
+	},
+	{
+		"id": 3,
+		"number": "3",
+		"transactions": [
+			{
+				"cmd": "SET",
+				"key": "test",
+				"value": "{\"id\":\"test\",\"value\":\"456\"}"
+			}
+		],
+		"size": 58,
+		"createdAt": "05 Nov 2023 22:55:26 GMT"
+	},
+	{
+		"id": 4,
+		"number": "4",
+		"transactions": [
+			{
+				"cmd": "GET",
+				"key": "test"
+			}
+		],
+		"size": 31,
+		"createdAt": "05 Nov 2023 22:55:32 GMT"
+	},
+	{
+		"id": 5,
+		"number": "5",
+		"transactions": [
+			{
+				"cmd": "SET",
+				"key": "test",
+				"value": "{\"id\":\"test\",\"value\":\"456\"}"
+			}
+		],
+		"size": 58,
+		"createdAt": "05 Nov 2023 22:55:43 GMT"
+	},
+	{
+		"id": 6,
+		"number": "6",
+		"transactions": [
+			{
+				"cmd": "GET",
+				"key": "test"
+			}
+		],
+		"size": 31,
+		"createdAt": "05 Nov 2023 22:55:47 GMT"
+	},
+	{
+		"id": 7,
+		"number": "7",
+		"transactions": [
+			{
+				"cmd": "SET",
+				"key": "samplekey",
+				"value": "{\"id\":\"samplekey\",\"value\":\"samplevalue2\"}"
+			},
+			{
+				"cmd": "SET",
+				"key": "test",
+				"value": "{\"id\":\"test\",\"value\":\"789\"}"
+			}
+		],
+		"size": 36,
+		"createdAt": "05 Nov 2023 22:55:50 GMT"
+	},
+	{
+		"id": 8,
+		"number": "8",
+		"transactions": [
+			{
+				"cmd": "GETRANGE",
+				"min_key": "a",
+				"max_key": "z"
+			}
+		],
+		"size": 31,
+		"createdAt": "05 Nov 2023 22:55:58 GMT"
+	}
+]

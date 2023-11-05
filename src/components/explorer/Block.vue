@@ -1,7 +1,6 @@
 <script lang="ts">
 	import { useBlocksStore } from "@/store/blocks";
 	import { storeToRefs } from "pinia";
-	import blocks from "../../api/blockstatus.json";
 	import { DownOutlined, FireTwoTone } from "@ant-design/icons-vue";
 	import { defineComponent } from "vue";
 	import { useRoute } from "vue-router";
@@ -36,8 +35,6 @@
 		// 	key: "action",
 		// },
 	];
-
-	const data = blocks;
 
 	export default defineComponent({
 		components: {
