@@ -34,11 +34,13 @@
 			const dayInterval = 24*60*60*1000;
 			let interval = 0;
 
-			let timeStart = this.blocks.length > 0 ? 
-							Date.parse(this.blocks[0].createdAt) : 0;
-			let latestTime = this.blocks.length > 0 ? 
-							Date.parse(this.blocks[this.blocks.length - 1].createdAt) 
-							: 0;
+			let timeStart = 0;
+			let latestTime = 0;
+
+			if (this.blocks.length > 0) {
+				timeStart = Date.parse(this.blocks[0].createdAt);
+				latestTime = Date.parse(this.blocks[this.blocks.length - 1].createdAt);
+			}
 
 			if (latestTime - timeStart <= hourInterval) {
 				interval = minuteInterval;
@@ -49,6 +51,12 @@
 			else {
 				interval = dayInterval;
 			}
+
+			if (this.blocks.length > 0) {
+				// Round down to nearest interval tick
+				timeStart -= timeStart % interval;
+				latestTime -= latestTime % interval;
+			}
 			let timeRange = arrayRange(timeStart, latestTime, interval);
 
 			const getChartDateString = (time) => {
@@ -56,6 +64,7 @@
 
 				// keep in UTC to be consistent with the BlocksTable
 				if (interval == dayInterval) {
+					// remove HH:MM:SS
 					str = str.substring(0, str.indexOf(":") - 3);
 				}
 				return str;
@@ -117,10 +126,7 @@
 		},
 		methods: {
 			async updateChart() {
-				const blocksStore = useBlocksStore();
-				const { blocks } = storeToRefs(blocksStore);
-				const { refreshBlocks } = blocksStore;
-				refreshBlocks();
+				// blocks is kept up-to-date by BlocksTable
 			
 				const arrayRange = (start, stop, step) =>
 					Array.from(
@@ -133,11 +139,13 @@
 				const dayInterval = 24*60*60*1000;
 				let interval = 0;
 
-				let timeStart = blocks.value.length > 0 ? 
-								Date.parse(blocks.value[0].createdAt) : 0;
-				let latestTime = blocks.value.length > 0 ? 
-								Date.parse(blocks.value[blocks.value.length - 1].createdAt) 
-								: 0;
+				let timeStart = 0;
+				let latestTime = 0;
+
+				if (this.blocks.length > 0) {
+					timeStart = Date.parse(this.blocks[0].createdAt);
+					latestTime = Date.parse(this.blocks[this.blocks.length - 1].createdAt);
+				}
 
 				if (latestTime - timeStart <= hourInterval) {
 					interval = minuteInterval;
@@ -147,6 +155,12 @@
 				}
 				else {
 					interval = dayInterval;
+				}
+
+				if (this.blocks.length > 0) {
+					// Round down to nearest interval tick
+					timeStart -= timeStart % interval;
+					latestTime -= latestTime % interval;
 				}
 				let timeRange = arrayRange(timeStart, latestTime, interval);
 
@@ -164,14 +178,14 @@
 
 				const transactionCount = Array(timeRange.length).fill(0);
 				let timeIndex = 0;
-				for (let i = 0; i < blocks.value.length; i++) {
-					let timeVal = Date.parse(blocks.value[i].createdAt);
+				for (let i = 0; i < this.blocks.length; i++) {
+					let timeVal = Date.parse(this.blocks[i].createdAt);
 
 					// TODO: improve efficiency using binary search
 					while (timeVal >= timeRange[timeIndex] + interval) {
 						timeIndex++;
 					}
-					transactionCount[timeIndex] += blocks.value[i].transactions.length;
+					transactionCount[timeIndex] += this.blocks[i].transactions.length;
 				}
 
 				this.chartOptions = {

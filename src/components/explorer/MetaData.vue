@@ -5,7 +5,6 @@
 	import { useBlocksStore, useLedgerStore } from "@/store/blocks";
 	import { storeToRefs } from "pinia";
 	
-
 	export default defineComponent({
 		name: "MetaData",
 		components: { Chart },
@@ -24,7 +23,6 @@
 			const { ledger } = storeToRefs(ledgerStore);
 			const { populateTable } = ledgerStore;
 			await populateTable();
-			console.log(ledger);
 
 			const blocksStore = useBlocksStore();
 			const { blocks } = storeToRefs(blocksStore);
