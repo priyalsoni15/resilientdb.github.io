@@ -8,19 +8,20 @@
 	} from "@ant-design/icons-vue";
 	import { defineComponent, reactive, ref, toRefs } from "vue";
 	const columns = [
-		{
-			title: "#",
+	{
+			title: "Block # (sort)",
 			dataIndex: "id",
 			key: "id",
 			fixed: "left",
-			width: 70,
+			width: 120,
 			sorter: {
 				compare: (a, b) => a.id - b.id,
 				multiple: 1,
 			},
+			defaultSortOrder: 'descend',
 		},
 		{
-			title: " Block #",
+			title: " Block # (search)",
 			dataIndex: "number",
 			key: "number",
 			width: 120,
