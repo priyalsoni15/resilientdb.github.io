@@ -19,7 +19,10 @@
 			/>
 		</div> -->
 
-		<blocks-table />
+		<blocks-table />	
+	</div>
+	<div class="credit-link">
+		<a href="https://icons8.com/icon/35635/available-updates">Available Updates</a> icon by <a href="https://icons8.com">Icons8</a>
 	</div>
 </template>
 <style scoped>
@@ -36,5 +39,8 @@
 	.search {
 		margin-top: 3rem;
 		margin: 0.5rem 2rem;
+	}
+	.credit-link {
+		margin: 2rem auto;
 	}
 </style>

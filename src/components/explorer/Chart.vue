@@ -7,7 +7,13 @@
 			:series="series"
 		></apexcharts>
 	</div>
-	<button @click="updateChart">Update</button>
+	<button @click="updateChart">
+		<img
+			width="15" height="15"
+			src="@/assets/icons8-available-updates-50.png"
+			alt="update"
+		/>
+	</button>
 </template>
 
 <script>
