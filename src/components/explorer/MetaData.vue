@@ -18,6 +18,14 @@
 				required: true,
 			},
 		},
+		methods: {
+			async updateMetadata() {
+				const ledgerStore = useLedgerStore();
+				const { ledger } = storeToRefs(ledgerStore);
+				const { populateTable } = ledgerStore;
+				await populateTable();
+			},
+		},
 		async setup() {
 			const ledgerStore = useLedgerStore();
 			const { ledger } = storeToRefs(ledgerStore);
@@ -74,6 +82,13 @@
 					<a-statistic title="Transactions Committed" :value="data[0].transactionNum" />
 				</a-col>
 			</a-row>
+			<button class="metadata-refresh-button" @click="updateMetadata">
+				<img
+					width="15" height="15"
+					src="@/assets/icons8-available-updates-50.png"
+					alt="update"
+				/>
+			</button>
 			<!-- <a-col :md="12"> -->
 				<Chart :blocks="blocks"/>
 				<!-- </a-col> -->
@@ -98,5 +113,8 @@
 		margin: 0 1rem;
 		margin-bottom: 2rem;
 		padding: 0 1rem;
+	}
+	.metadata-refresh-button {
+		margin: 1rem auto;
 	}
 </style>
